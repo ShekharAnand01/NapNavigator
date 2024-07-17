@@ -8,8 +8,8 @@ import androidx.room.PrimaryKey
 data class SleepNight(
     @PrimaryKey(autoGenerate = true) val nightId: Long = 0L,
     @ColumnInfo(name = "StartTime") val startTime: Long = System.currentTimeMillis(),
-    @ColumnInfo(name = "EndTime") val endTime: Long = startTime,
-    @ColumnInfo(name = "Rating") val rating: Int = -1
+    @ColumnInfo(name = "EndTime") var endTime: Long = startTime,
+    @ColumnInfo(name = "Rating") var rating: Int = -1
 
 
 )
